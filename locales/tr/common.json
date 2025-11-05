@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "title": "Almonzer Fadl",
+    "subtitle": "Yazılım Geliştirici"
+  },
+  "about": {
+    "title": "Hakkımda",
+    "p1": "Ben <span class=\"relative inline-block font-bold text-foreground\">tam yığın yazılım geliştirici</span> ve <span class=\"relative inline-block font-bold text-foreground\">gelecek vadeden bir elektrik ve elektronik mühendisiyim</span>, <span class=\"relative inline-block font-bold text-foreground\">Türkiye'den</span> faaliyet gösteriyorum. Yazılım ve donanım arasında köprü kuran pratik, zarif mühendislik çözümleri yaratma konusunda tutkuluyum.",
+    "p2": "Uzmanlığım <span class=\"relative inline-block font-bold text-foreground\">modern yığın (Next.js, React, TypeScript ve Tailwind CSS)</span> üzerine odaklanmıştır ve <span class=\"relative inline-block font-bold text-foreground\">Node.js/Laravel</span>'de güçlü arka uç becerilerine sahibim. Hızlı, yüksek etkili geliştirme konusunda uzmanım.",
+    "p3": "Başarılarım arasında bir ay içinde <span class=\"relative inline-block font-bold text-foreground\">tam ölçekli bir Oto Tamir Yönetim yazılımını</span> bağımsız olarak geliştirmek ve şu anda <span class=\"relative inline-block font-bold text-foreground\">yazılım şişkinliğiyle mücadele etmek için birleştirilmiş bir üretkenlik uygulaması olan Minimind'i</span> geliştirmek yer almaktadır. Sürekli olarak yeni zorluklar arıyorum ve mümkün olan en iyi sonuçları sunmak için sürekli öğrenmeye değer veriyorum."
+  },
+  "technologies": {
+    "title": "Teknolojiler"
+  },
+  "experience": {
+    "workTab": "İş",
+    "educationTab": "Eğitim"
+  },
+  "projects": {
+    "title": "Projeler",
+    "subtitle": "İşte üzerinde çalıştığım projelerden bazıları.",
+    "techStack": "Kullanılan Teknolojiler",
+    "sourceCode": "Kaynak Kodu",
+    "livePreview": "Canlı Önizleme"
+  }
+}

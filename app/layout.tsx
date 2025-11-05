@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from '@/lib/theme-context';
+import { I18nProvider } from './i18n-provider';
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair",
@@ -55,20 +56,24 @@ export const metadata: Metadata = {
   },
 };
 
+import { DynamicDirection } from './dynamic-direction';
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" dir="ltr" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${playfairDisplay.variable} ${sourceSerif.variable} antialiased`}
         suppressHydrationWarning
       >
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+        <I18nProvider>
+          <ThemeProvider>
+            <DynamicDirection>{children}</DynamicDirection>
+          </ThemeProvider>
+        </I18nProvider>
       </body>
     </html>
   );

@@ -1,3 +1,5 @@
+"use client";
+
 /* eslint-disable jsx-a11y/role-supports-aria-props */
 import { Footer } from '@/components/layout/footer'
 import { Hero } from '@/components/sections/hero'
@@ -6,23 +8,39 @@ import { About } from '@/components/sections/about'
 import { Experience } from '@/components/sections/experience'
 import { Projects } from '@/components/sections/projects'
 import { ThemeToggle } from '@/components/ui/theme-toggle'
+import { LanguageSwitcher } from '@/components/ui/language-switcher';
+
+
+import Squares from '@/components/ui/squares';
+
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white dark:bg-black relative">
-      {/* Simple Grid Background */}
-      <div className="absolute inset-0 "></div>
+      <div className="relative fade-out-bottom">
+        <div className="absolute inset-0 z-0">
+          <Squares 
+            speed={0.5} 
+            squareSize={100}
+            direction='down'
+          />
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-5 lg:py-10 relative z-20">
+          <div className="flex h-full flex-col gap-12 sm:gap-16 py-8 sm:py-12">
+            <div id="home">
+              <Hero />
+            </div>
+            <div id="about">
+              <About />
+            </div>
+            <div id="technologies">
+              <Technologies />
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-5 lg:py-10 relative z-20">
         <div className="flex h-full flex-col gap-12 sm:gap-16 py-8 sm:py-12">
-          <div id="home">
-            <Hero />
-          </div>
-          <div id="about">
-            <About />
-          </div>
-          <div id="technologies">
-            <Technologies />
-          </div>
           <div id="experience">
             <Experience />
           </div>
@@ -64,6 +82,7 @@ export default function Home() {
           <div className="relative cursor-pointer select-none inline-flex size-8 sm:size-9 items-center justify-center text-foreground transition-colors duration-100 focus-visible:outline-2">
             <ThemeToggle />
           </div>
+          <LanguageSwitcher />
         </div>
       </div>
     </main>

@@ -5,33 +5,47 @@ import { Button } from '@/components/ui/button'
 import { ThemeToggle } from '@/components/ui/theme-toggle'
 import { Menu, X } from 'lucide-react'
 
+import { useTranslation } from 'react-i18next';
+
 const navItems = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
   { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' }
-]
+];
 
 export function Header() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
+      setIsScrolled(window.scrollY > 50);
+    };
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href)
+    const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsMobileMenuOpen(false)
-  }
+    setIsMobileMenuOpen(false);
+  };
+
+  const handleResumeDownload = () => {
+    const lang = i18n.language;
+    let resumePath = '/resume_en.pdf';
+    if (lang === 'ar') {
+      resumePath = '/resume_ar.pdf';
+    } else if (lang === 'tr') {
+      resumePath = '/resume_tr.pdf';
+    }
+    window.open(resumePath, '_blank');
+  };
 
   return (
     <motion.header
@@ -66,6 +80,13 @@ export function Header() {
                 {item.name}
               </Button>
             ))}
+            <Button
+              variant="ghost"
+              onClick={handleResumeDownload}
+              className="hover:text-primary transition-colors"
+            >
+              Resume
+            </Button>
           </nav>
 
           {/* Theme Toggle */}
@@ -109,6 +130,13 @@ export function Header() {
                 {item.name}
               </Button>
             ))}
+            <Button
+              variant="ghost"
+              onClick={handleResumeDownload}
+              className="w-full justify-start"
+            >
+              Resume
+            </Button>
           </nav>
         </motion.div>
       </div>

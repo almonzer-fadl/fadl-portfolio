@@ -1,15 +1,18 @@
 'use client'
 import Image from 'next/image'
 import { useTheme } from '@/lib/theme-context'
+import { cvPath } from '@/lib/data';
+import { useTranslation } from 'react-i18next';
 
 export function Hero() {
+  const { t } = useTranslation('common');
   const { theme } = useTheme()
   
   return (
     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-0">
       <div className="flex items-center gap-2">
         <Image
-          src={theme === 'light' ? '/logos/logoBlack.png' : '/logos/logoWhite.png'}
+          src={theme === 'light' ? '/logos/logoBlackTextNoBg.png' : '/logos/logoWhiteTextNoBg.png'}
           alt="FADL Logo"
           width={48}
           height={48}
@@ -17,8 +20,8 @@ export function Hero() {
           priority
         />
         <div>
-          <p className="font-bold text-base sm:text-lg">Almonzer Fadl</p>
-          <p className="text-muted-foreground text-xs sm:text-sm">Software Developer</p>
+          <p className="font-bold text-base sm:text-lg">{t('hero.title')}</p>
+          <p className="text-muted-foreground text-xs sm:text-sm">{t('hero.subtitle')}</p>
         </div>
       </div>
       
@@ -26,7 +29,7 @@ export function Hero() {
         <div className="flex flex-col items-end gap-2 md:flex-row md:items-center">
           <div className="flex items-center gap-2">
             <a
-              href="mailto:almonzerfadl@gmail.com"
+              href="mailto:almonzer@almonzerfadl.com"
               className="text-foreground grid size-9 place-content-center rounded-full border border-black/10 bg-accent p-2 transition-all hover:bg-accent/60 dark:border-white/10"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -35,7 +38,7 @@ export function Hero() {
               </svg>
             </a>
             <a
-              href="https://linkedin.com/in/almonzerfadl"
+              href="https://www.linkedin.com/in/almonzer-fadl-55648238b/"
               target="_blank"
               className="grid size-9 place-content-center rounded-full border border-black/10 bg-[#0b66c2] p-2 text-white transition-all hover:bg-[#0b66c2]/60 dark:border-white/10"
             >
@@ -46,7 +49,7 @@ export function Hero() {
               </svg>
             </a>
             <a
-              href="https://github.com/almonzerfadl"
+              href="https://github.com/almonzer-fadl"
               target="_blank"
               className="grid size-9 place-content-center rounded-full border border-black/30 bg-[#24292e] p-2 text-white transition-all hover:bg-[#24292e]/60 dark:border-white/10"
             >
@@ -55,7 +58,7 @@ export function Hero() {
               </svg>
             </a>
           </div>
-          <a href="/resume.pdf" download>
+          <a href={cvPath} download>
             <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group relative px-4 py-2 h-fit rounded-full bg-secondary text-foreground hover:bg-secondary/70">
               Resume
               <div className="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 *:size-4 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-2 group-hover:opacity-100">

@@ -5,19 +5,24 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { allProjects } from '@/lib/data'
 import { ThemeToggle } from '@/components/ui/theme-toggle'
-import Squares from '@/components/ui/squares'
+import DotGrid from '@/components/ui/dot-grid'
+import { getIcon } from '@/components/sections/technologies'
+import { LanguageSwitcher } from '@/components/ui/language-switcher'
 
 export default function ProjectsPage() {
   return (
     <main className="min-h-screen bg-white dark:bg-black relative">
-      {/* Animated Squares Background */}
-      <Squares 
-        speed={0.5} 
-        squareSize={40}
-        direction='diagonal'
-        borderColor='rgba(0, 0, 0, 0.1)'
-        hoverFillColor='rgba(0, 0, 0, 0.05)'
-      />
+      <div className="absolute inset-0 z-0">
+        <DotGrid
+          dotSize={10}
+          gap={15}
+          proximity={120}
+          shockRadius={250}
+          shockStrength={5}
+          resistance={750}
+          returnDuration={1.5}
+        />
+      </div>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-5 lg:py-10 relative z-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,7 +59,9 @@ export default function ProjectsPage() {
                         <div className="flex *:shadow-2xl">
                           {project.tech.slice(0, 4).map((tech, i) => (
                             <div key={i} className="-ml-1 sm:-ml-2 size-6 sm:size-8 rotate-3 transition-all group-hover:mx-1 sm:group-hover:mx-2 group-hover:ml-0 group-hover:rotate-0 bg-white/20 rounded-full flex items-center justify-center">
-                              <span className="text-xs font-bold text-white">{tech.charAt(0)}</span>
+                              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="size-4 sm:size-5 text-white">
+                                <path fill="currentColor" d={getIcon(tech)}></path>
+                              </svg>
                             </div>
                           ))}
                         </div>
@@ -118,6 +125,9 @@ export default function ProjectsPage() {
           </a>
           <div className="relative cursor-pointer select-none inline-flex size-8 sm:size-9 items-center justify-center text-foreground transition-colors duration-100 focus-visible:outline-2">
             <ThemeToggle />
+          </div>
+          <div className="relative cursor-pointer select-none inline-flex size-8 sm:size-9 items-center justify-center text-foreground transition-colors duration-100 focus-visible:outline-2">
+            <LanguageSwitcher />
           </div>
         </div>
       </div>

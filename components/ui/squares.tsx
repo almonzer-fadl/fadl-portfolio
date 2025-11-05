@@ -1,7 +1,6 @@
-'use client'
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
+import { useThemeColors } from '@/lib/use-theme-colors';
 
-type CanvasStrokeStyle = string | CanvasGradient | CanvasPattern;
 
 interface GridOffset {
   x: number;
@@ -11,18 +10,25 @@ interface GridOffset {
 interface SquaresProps {
   direction?: 'diagonal' | 'up' | 'right' | 'down' | 'left';
   speed?: number;
-  borderColor?: CanvasStrokeStyle;
   squareSize?: number;
-  hoverFillColor?: CanvasStrokeStyle;
 }
 
 const Squares: React.FC<SquaresProps> = ({
   direction = 'right',
   speed = 1,
-  borderColor = '#999',
   squareSize = 40,
-  hoverFillColor = '#222'
 }) => {
+  const { foreground, background, muted, mutedForeground } = useThemeColors();
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setIsDark(document.documentElement.classList.contains('dark'));
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    setIsDark(document.documentElement.classList.contains('dark'));
+    return () => observer.disconnect();
+  }, []);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const requestRef = useRef<number | null>(null);
   const numSquaresX = useRef<number>(0);
@@ -63,24 +69,14 @@ const Squares: React.FC<SquaresProps> = ({
             Math.floor((x - startX) / squareSize) === hoveredSquareRef.current.x &&
             Math.floor((y - startY) / squareSize) === hoveredSquareRef.current.y
           ) {
-            ctx.fillStyle = hoverFillColor;
+            ctx.fillStyle = isDark ? mutedForeground : muted;
             ctx.fillRect(squareX, squareY, squareSize, squareSize);
           }
 
-          ctx.strokeStyle = borderColor;
+          ctx.strokeStyle = isDark ? foreground : muted;
           ctx.strokeRect(squareX, squareY, squareSize, squareSize);
         }
       }
-
-      // Create a gradient that fades from transparent at top to dark at bottom
-      const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-      gradient.addColorStop(0, 'rgba(0, 0, 0, 0)');
-      gradient.addColorStop(0.3, 'rgba(0, 0, 0, 0.1)');
-      gradient.addColorStop(0.7, 'rgba(0, 0, 0, 0.3)');
-      gradient.addColorStop(1, 'rgba(0, 0, 0, 0.6)');
-
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
     };
 
     const updateAnimation = () => {
@@ -144,9 +140,9 @@ const Squares: React.FC<SquaresProps> = ({
       canvas.removeEventListener('mousemove', handleMouseMove);
       canvas.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, [direction, speed, borderColor, hoverFillColor, squareSize]);
+  }, [direction, speed, squareSize, foreground, background, muted, mutedForeground, isDark]);
 
-  return <canvas ref={canvasRef} className="w-full h-full border-none block absolute inset-0 pointer-events-none -z-10"></canvas>;
+  return <canvas ref={canvasRef} className="w-full h-full border-none block"></canvas>;
 };
 
 export default Squares;

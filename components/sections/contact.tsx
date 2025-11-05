@@ -38,7 +38,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
-                  <p className="text-base font-normal text-black dark:text-white">almonzerfadl@gmail.com</p>
+                  <p className="text-base font-normal text-black dark:text-white">almonzer@almonzerfadl.com</p>
                 </div>
               </div>
               
@@ -71,7 +71,7 @@ export function Contact() {
               </a>
               
               <a
-                href="mailto:almonzerfadl@gmail.com"
+                href="mailto:almonzer@almonzerfadl.com"
                 className="flex items-center justify-center gap-2 p-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 font-normal"
               >
                 <Send className="w-4 h-4" />
@@ -83,7 +83,7 @@ export function Contact() {
               <h4 className="text-lg font-normal text-black dark:text-white mb-4">Follow Me</h4>
               <div className="flex gap-3">
                 <a
-                  href="https://github.com/almonzerfadl"
+                  href="https://github.com/almonzer-fadl"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-xl flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors group"
@@ -92,7 +92,7 @@ export function Contact() {
                 </a>
                 
                 <a
-                  href="https://linkedin.com/in/almonzerfadl"
+                  href="https://www.linkedin.com/in/almonzer-fadl-55648238b/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-xl flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors group"
