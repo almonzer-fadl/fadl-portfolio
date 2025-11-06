@@ -1,8 +1,12 @@
 'use client'
 import { motion } from 'framer-motion'
 import { Mail, MapPin, Download, Github, Linkedin, Twitter, Send } from 'lucide-react'
+import { useResumePath } from '../../lib/useResumePath'
 
 export function Contact() {
+  const getResumePath = useResumePath();
+  const resumePath = getResumePath();
+
   return (
     <section className="py-16">
       <div className="max-w-4xl mx-auto px-4">
@@ -62,7 +66,7 @@ export function Contact() {
           >
             <div className="grid grid-cols-2 gap-3">
               <a
-                href="/resume.pdf"
+                href={resumePath}
                 download
                 className="flex items-center justify-center gap-2 p-4 bg-black dark:bg-white text-white dark:text-black rounded-xl hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300 font-normal"
               >

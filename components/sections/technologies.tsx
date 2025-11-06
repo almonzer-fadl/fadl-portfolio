@@ -28,7 +28,7 @@ export function Technologies() {
 
   return (
     <div className="mb-8" style={{opacity: 1}}>
-      <h2 className="mb-3 text-2xl sm:text-3xl md:text-4xl font-instrument italic text-white font-bold">{t('technologies.title')}</h2>
+      <h2 className="mb-3 text-2xl sm:text-3xl md:text-4xl font-instrument italic text-black dark:text-white font-bold">{t('technologies.title')}</h2>
       <div className="grid grid-cols-4 gap-1 sm:grid-cols-6 md:grid-cols-7">
         {technologies.map((tech: { name: string; icon: string }, index: number) => (
           <div key={index} className="border text-card-foreground shadow overflow-hidden rounded-md border-zinc-200 bg-zinc-100/30 transition-colors backdrop-blur-sm dark:border-zinc-800 dark:bg-zinc-900/30" style={{opacity: 1, transform: 'none'}}>

@@ -73,7 +73,7 @@ const Squares: React.FC<SquaresProps> = ({
             ctx.fillRect(squareX, squareY, squareSize, squareSize);
           }
 
-          ctx.strokeStyle = isDark ? foreground : muted;
+          ctx.strokeStyle = isDark ? foreground + '4D' : muted + '1A';
           ctx.strokeRect(squareX, squareY, squareSize, squareSize);
         }
       }

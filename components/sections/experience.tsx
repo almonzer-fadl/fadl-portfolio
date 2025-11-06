@@ -25,8 +25,8 @@ export function Experience() {
               <ul className={i18n.language === 'ar' ? 'mr-10 border-r' : 'ml-10 border-l'}>
                 {workExperiences.map((experience, index) => (
                   <li key={index} className={`relative ${i18n.language === 'ar' ? 'mr-10' : 'ml-10'} py-4`}>
-                    <div className={`absolute ${i18n.language === 'ar' ? '-right-16' : '-left-16'} top-4 flex items-center justify-center rounded-full bg-white dark:bg-black border`}>
-                      <span className="relative flex shrink-0 overflow-hidden rounded-full size-12 border">
+                    <div className={`absolute ${i18n.language === 'ar' ? 'sm:-right-16 -right-12' : 'sm:-left-16 -left-12'} top-4 flex items-center justify-center rounded-full bg-white dark:bg-black border`}>
+                      <span className="relative flex shrink-0 overflow-hidden rounded-full sm:size-12 size-10 border">
                         <div className="aspect-square h-full w-full bg-background object-contain flex items-center justify-center text-xs font-bold">
                           {experience.logo ? (
                             <img src={experience.logo} alt={experience.company} className="object-cover h-full w-full" />
@@ -64,8 +64,8 @@ export function Experience() {
               <ul className={i18n.language === 'ar' ? 'mr-10 border-r' : 'ml-10 border-l'}>
                 {educationExperiences.map((experience, index) => (
                   <li key={index} className={`relative ${i18n.language === 'ar' ? 'mr-10' : 'ml-10'} py-4`}>
-                    <div className={`absolute ${i18n.language === 'ar' ? '-right-16' : '-left-16'} top-4 flex items-center justify-center rounded-full bg-white dark:bg-black border`}>
-                      <span className="relative flex shrink-0 overflow-hidden rounded-full size-12 border">
+                    <div className={`absolute ${i18n.language === 'ar' ? 'sm:-right-16 -right-12' : 'sm:-left-16 -left-12'} top-4 flex items-center justify-center rounded-full bg-white dark:bg-black border`}>
+                      <span className="relative flex shrink-0 overflow-hidden rounded-full sm:size-12 size-10 border">
                         <div className="aspect-square h-full w-full bg-white object-contain flex items-center justify-center text-xs font-bold">
                           {experience.logo ? (
                             <img src={experience.logo} alt={experience.company} className="object-contain h-full w-full" />

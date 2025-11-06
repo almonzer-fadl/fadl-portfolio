@@ -198,12 +198,12 @@ export const experiences = [
 // Projects data
 export const projects = [
   {
-    title: 'TeraMotors: Auto Repair Management Software',
+    title: 'TeraMotors Software',
     description: "A comprehensive, full-stack management solution designed for auto repair shops (similar to ARI). Features end-to-end inventory management, service scheduling, technician tracking, and custom invoicing.",
     tech: ['nextjs', 'react', 'typescript', 'tailwind', 'nodejs', 'supabase'],
     github: 'https://github.com/almonzer-fadl/teramotors',
     live: 'https://www.teramotor.cc/',
-    image: '/images/fruitcards',
+    image: '/images/teramotors.png/',
     featured: true,
 
     translations: {
@@ -218,12 +218,12 @@ export const projects = [
     }
   },
   {
-    title: 'Tkaful: Charity Organization',
+    title: 'Tkaful Organization',
     description: 'Developed a robust Student and Admin management portal for a charity organization. Implements secure role-based access control for managing applications, tracking volunteer activities, and communications.',
     tech: ['nextjs', 'react', 'typescript', 'tailwind',],
     github: 'https://github.com/AAbosham/tkaful',
     live: 'https://tkaful.testingapplications.xyz/',
-    image: '/images/fruitcards.png',
+    image: '/images/tkafulorg.png',
     featured: true,
     translations: {
       ar: {
@@ -237,12 +237,12 @@ export const projects = [
     }
   },
   {
-    title: 'Takkah App: Whatsaap tool',
+    title: 'Takkah App',
     description: 'A mobile or web application focusing on engaging user interaction. Showcases proficiency in mobile-first design and state management for complex user interactions.',
     tech: ['react', 'typescript', 'typescript', 'tailwind'],
     github: 'https://github.com/AAbosham/takkah-app',
     live: 'https://takkah.app/',
-    image: '/images/fruitcards',
+    image: '/images/takkahapp.png/',
     featured: true,
     translations: {
       ar: {
@@ -256,13 +256,13 @@ export const projects = [
     }
   },
   {
-    title: 'Teravisions Academy: E-learning Platform',
+    title: 'Teravisions Academy',
     description: 'An internal or client-facing application built for educational or training purposes, demonstrating solid architecture for content delivery and user progress tracking.',
     tech: ['nextjs', 'react', 'typescript', 'tailwind', 'code', 'shield'],
     github: 'https://github.com/almonzer-fadl/teravisions-academy',
     live: 'https://teravisionsai.com/',
     featured: true,
-    image: '/images/fruitcards',
+    image: '/images/tvacademy.png/',
     translations: {
       ar: {
         title: 'أكاديمية تيرافيجنز: منصة تعليم إلكتروني',
@@ -286,7 +286,7 @@ export const allProjects = [
     github: 'https://github.com/almonzer-fadl/passportRenewSys',
     live: 'https://sdpassport.vercel.app/',
     featured: false,
-    image: '/images/fruitcards',
+    image: '/images/passportrenew.png/',
     translations: {
       ar: {
         title: 'نظام تجديد جواز السفر',
@@ -299,12 +299,12 @@ export const allProjects = [
     }
   },
   {
-    title: 'TeraLab: Internal Development Tool',
+    title: 'TeraLab AI',
     description: 'A project related to the "Tera" ecosystem, potentially a testing environment or a utility for internal development and experimentation.',
     tech: ['code', 'javascript', 'nodejs', 'code'],
     github: 'https://github.com/almonzer-fadl/teralab',
     live: 'https://teralab.io/',
-    image: '/images/fruitcards',
+    image: '/images/teralab.png/',
     featured: false,
     translations: {
       ar: {
@@ -318,12 +318,12 @@ export const allProjects = [
     }
   },
   {
-    title: 'Fruit Cards Game/App',
+    title: 'Fruit Cards Game',
     description: 'A card-based application or game likely focused on engaging user interaction, demonstrating strong front-end skills and visual design implementation.',
     tech: ['react', 'javascript', 'code', 'code'],
     github: 'https://github.com/Mohannad-Algaali/fruit-cards',
     live: 'https://fruit-cards.vercel.app/',
-    image: '/images/fruitcards',
+    image: '/images/fruitcards.png',
     featured: false,
     translations: {
       ar: {
@@ -337,13 +337,13 @@ export const allProjects = [
     }
   },
   {
-    title: 'Minimind-V2',
+    title: 'Minimind',
     description: 'The updated version of your unified productivity app (Minimind), continuing to merge tasks, calendar, and notes into a simple, non-bloated mobile experience.',
     tech: ['react', 'typescript', 'code', 'zap'],
     github: 'https://github.com/almonzer-fadl/minimind-V2',
     live: 'https://minimind-ba00.onrender.com/',
     featured: false,
-    image: '/images/fruitcards',
+    image: '/images/minimind.png',
     translations: {
       ar: {
         title: 'مينمايند-الإصدار الثاني',
@@ -374,6 +374,3 @@ export const technologies = [
   { name: 'Laravel', icon: 'laravel' },
   { name: 'Vite', icon: 'vite' }
 ];
-
-// TODO: Add the correct path to your CV
-export const cvPath = '/resume_en.pdf';

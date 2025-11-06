@@ -1,12 +1,14 @@
 'use client'
 import Image from 'next/image'
 import { useTheme } from '@/lib/theme-context'
-import { cvPath } from '@/lib/data';
+import { useResumePath } from '../../lib/useResumePath';
 import { useTranslation } from 'react-i18next';
 
 export function Hero() {
   const { t } = useTranslation('common');
   const { theme } = useTheme()
+  const getResumePath = useResumePath();
+  const resumePath = getResumePath();
   
   return (
     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-0">
@@ -26,7 +28,7 @@ export function Hero() {
       </div>
       
       <div className="flex flex-col justify-end gap-2">
-        <div className="flex flex-col items-end gap-2 md:flex-row md:items-center">
+        <div className="flex flex-col items-end gap-2 sm:flex-row sm:items-center">
           <div className="flex items-center gap-2">
             <a
               href="mailto:almonzer@almonzerfadl.com"
@@ -58,7 +60,7 @@ export function Hero() {
               </svg>
             </a>
           </div>
-          <a href={cvPath} download>
+          <a href={resumePath} download>
             <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group relative px-4 py-2 h-fit rounded-full bg-secondary text-foreground hover:bg-secondary/70">
               Resume
               <div className="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 *:size-4 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-2 group-hover:opacity-100">
@@ -70,7 +72,7 @@ export function Hero() {
             </button>
           </a>
         </div>
-        <div className="flex w-fit items-center gap-2 self-end rounded-full bg-green-500/20 px-2 py-1">
+        <div className="flex w-fit items-center gap-2 self-end rounded-full bg-green-500/20 px-2 py-1 mt-4 sm:self-end">
           <span className="block size-2 animate-pulse rounded-full bg-green-500"></span>
           <span className="text-xs font-medium">Available for work</span>
         </div>
