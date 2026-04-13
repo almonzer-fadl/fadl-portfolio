@@ -152,13 +152,13 @@ export const experiences = [
   },
   {
     type: 'education' as const,
-    title: 'BEng Electrical & Electronic Engineering',
-    company: 'University of Nottingham',
-    location: 'Nottingham, UK',
+    title: 'BSc Computer Science (Information Systems)',
+    company: 'University Malaya',
+    location: 'Kuala Lumpur, Malaysia',
     period: '2025 – Present',
-    description: 'Commencing program focused on Digital Systems, Embedded Computing, Power, and Communications. The curriculum provides a strong foundation for hardware-software integration through practical, lab-based projects.',
+    description: 'Program focused on computer science foundations, information systems, software engineering, and data-driven problem solving.',
     achievements: [],
-    logo: '/logos/UoN-Nottingham-Blue.png',
+    logo: '/logos/logoWhite.png',
     translations: {
       ar: 'برنامج يبدأ بالتركيز على الأنظمة الرقمية والحوسبة المدمجة والطاقة والاتصالات. يوفر المنهج أساسًا قويًا لتكامل الأجهزة والبرامج من خلال مشاريع عملية قائمة على المختبرات.',
       tr: 'Dijital Sistemler, Gömülü Bilgi İşlem, Güç ve İletişim odaklı bir program başlıyor. Müfredat, pratik, laboratuvar tabanlı projeler aracılığıyla donanım-yazılım entegrasyonu için güçlü bir temel sağlamaktadır.'

@@ -247,7 +247,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8"
         >
-          Electrical & Electronics Engineering Student | Software Developer
+          Computer Science (Information Systems) Student | Software Developer
         </motion.p>
         
         <motion.div
@@ -353,11 +353,11 @@ const experiences = [
     ]
   },
   {
-    title: 'Electrical & Electronics Engineering',
+    title: 'Computer Science (Information Systems)',
     company: 'University',
     location: 'Cairo, Egypt',
     period: '2020 - 2024',
-    description: 'Comprehensive study of electrical systems, electronics, and engineering principles.',
+    description: 'Comprehensive study of computer science foundations, information systems, and software engineering principles.',
     achievements: [
       'Solid academic foundation with hands-on application',
       'Project-based learning with real-world applications',
@@ -904,11 +904,11 @@ import { ScrollReveal, Parallax, StaggeredList } from 'react-bits'
 export const portfolioData = {
   personal: {
     name: 'Almonzer Fadl',
-    title: 'Electrical & Electronics Engineering Student | Software Developer',
+    title: 'Computer Science (Information Systems) Student | Software Developer',
     location: 'Cairo, Egypt',
     email: 'almonzerfadl@gmail.com',
     availability: true,
-    bio: 'I\'m an Electrical & Electronics Engineering student and a software developer building enterprise-level software solutions...'
+    bio: 'I\'m a Computer Science (Information Systems) student at University Malaya and a software developer building enterprise-level software solutions...'
   },
   skills: [
     { name: 'React', category: 'Frontend', level: 'Advanced' },

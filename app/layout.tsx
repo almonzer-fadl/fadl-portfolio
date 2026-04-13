@@ -18,8 +18,8 @@ const sourceSerif = Source_Serif_4({
 
 export const metadata: Metadata = {
   title: "Almonzer Fadl - Portfolio",
-  description: "Electrical & Electronics Engineering Student | Software Developer | Available for work",
-  keywords: ["portfolio", "software developer", "electrical engineering", "react", "nextjs", "typescript"],
+  description: "Computer Science (Information Systems) Student | Software Developer | Available for work",
+  keywords: ["portfolio", "software developer", "computer science", "information systems", "react", "nextjs", "typescript"],
   authors: [{ name: "Almonzer Fadl" }],
   creator: "Almonzer Fadl",
   icons: {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Almonzer Fadl - Portfolio",
-    description: "Electrical & Electronics Engineering Student | Software Developer",
+    description: "Computer Science (Information Systems) Student | Software Developer",
   },
   robots: {
     index: true,
